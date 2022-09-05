@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">App_Ecommerce</string>
+    <string name="title_activity_rigster_fragment">Rigster_fragment</string>
+    <string name="tab_text_1">LOGIN</string>
+    <string name="tab_text_2">SIGN UP</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_maps_google">MapsGoogleActivity</string>
+</resources>

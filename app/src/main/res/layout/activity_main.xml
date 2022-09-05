@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zback"
+    app:layout_scrollFlags="snapMargins"
+    tools:context=".Main">
+
+    <ImageView
+        android:id="@+id/imageLogoCustomer"
+        android:layout_width="73dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pr" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabchange"
+        android:layout_width="63dp"
+        android:layout_height="592dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/frame1"
+        android:backgroundTint="#fffafa"
+        android:elevation="20dp"
+        android:foregroundGravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageTab"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/txtWatch"
+            android:layout_width="53dp"
+            android:layout_height="81dp"
+            android:layout_marginBottom="128dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:rotation="270"
+            android:text="Smart Watch"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageLogOut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtOrder"
+            android:layout_width="53dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:onClick="Order"
+            android:rotation="270"
+            android:text="Order"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageLogOut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtWatch"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/txtPhone"
+            android:layout_width="51dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:rotation="270"
+            android:text="Phone"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtLabs"
+            android:layout_width="52dp"
+            android:layout_height="73dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:rotation="270"
+            android:text="Labs"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtWatch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.727"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPhone"
+            app:layout_constraintVertical_bias="0.41" />
+
+        <ImageView
+            android:id="@+id/imageLogOut"
+            android:layout_width="41dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="124dp"
+            android:onClick="Logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtOrder"
+            app:srcCompat="@drawable/logout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textSir"
+        android:layout_width="312dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_bold"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constsearch"
+        android:layout_width="345dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/frame1"
+        android:backgroundTint="#fffafa"
+        android:elevation="20dp"
+        android:foregroundGravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.772"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109">
+
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text"
+            android:textColor="@color/black"
+
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <ImageView
+            android:id="@+id/imageSearch"
+            android:layout_width="32dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="199dp"
+            android:layout_marginLeft="199dp"
+            android:layout_marginBottom="25dp"
+            android:onClick="Search"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextSearch"
+            app:layout_constraintEnd_toEndOf="@+id/editTextSearch"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextSearch"
+            app:layout_constraintTop_toTopOf="@+id/editTextSearch"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/imageVoice"
+            android:layout_width="25dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:onClick="Speach"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageSearch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.343"
+            app:srcCompat="@drawable/mic_search" />
+
+        <ImageView
+            android:id="@+id/imageBarCode"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:onClick="BarCode"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageVoice"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.322"
+            app:srcCompat="@drawable/bar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirmorder"
+        android:layout_width="312dp"
+        android:layout_height="501dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/frame2"
+        android:backgroundTint="#fffafa"
+        android:elevation="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toEndOf="@id/tabchange"
+        app:layout_constraintTop_toBottomOf="@+id/constsearch"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageMins"
+            android:layout_width="55dp"
+            android:layout_height="41dp"
+            android:onClick="Mins"
+            app:layout_constraintBottom_toBottomOf="@+id/imagePlus"
+            app:layout_constraintEnd_toStartOf="@+id/textNumItem"
+            app:layout_constraintHorizontal_bias="0.914"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imagePlus"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/mins" />
+
+        <TextView
+            android:id="@+id/textNumItem"
+            android:layout_width="138dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="28dp"
+            android:enabled="false"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:hint="Number Of Items"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textColorHint="@color/teal_700"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imagePlus"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imagePlus"
+            android:layout_width="55dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:onClick="Plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textNumItem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.336"
+            app:srcCompat="@drawable/plus" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="145dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="252dp"
+            android:background="@drawable/btn_log_sign"
+            android:onClick="add_itemPrice"
+            android:text="Add to Cart"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:backgroundTint="@android:color/holo_blue_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <AutoCompleteTextView
+            android:id="@+id/textItemId"
+            android:layout_width="235dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center|left"
+            android:hint="Item_Id"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorHint="@android:color/holo_red_dark"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/imagePlus"
+            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintStart_toStartOf="@+id/imageMins"
+            app:layout_constraintTop_toBottomOf="@+id/textRequest" />
+
+        <ImageView
+            android:id="@+id/imageSelect"
+            android:layout_width="28dp"
+            android:layout_height="23dp"
+            android:onClick="DropDown"
+            app:layout_constraintBottom_toBottomOf="@id/textItemId"
+            app:layout_constraintEnd_toEndOf="@+id/textItemId"
+            app:layout_constraintTop_toTopOf="@+id/textItemId"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/downarrow" />
+
+        <Button
+            android:id="@+id/buttonConfirm"
+            android:layout_width="145dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="88dp"
+            android:background="@drawable/btn_log_sign"
+            android:onClick="Payment"
+            android:text="Confirm Order"
+            android:textColor="@color/white"
+
+            android:textSize="10sp"
+            app:backgroundTint="@android:color/holo_green_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textRequest"
+            android:layout_width="167dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="Requst Order"
+            android:textColor="@color/design_default_color_on_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textTotalPrice"
+            android:layout_width="159dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginBottom="28dp"
+            android:enabled="false"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text=" Total Price"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/buttonConfirm" />
+
+        <TextView
+            android:id="@+id/textDollarSign"
+            android:layout_width="37dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="$"
+            android:textColor="@android:color/holo_green_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textTotalPrice" />
+
+        <EditText
+            android:id="@+id/textUserLocation"
+            android:layout_width="238dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="28dp"
+            android:enabled="false"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center|left"
+            android:hint="User Loation
+"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/holo_red_dark"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
+
+        <ImageView
+            android:id="@+id/imageUserLocation"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="12dp"
+            android:onClick="Location"
+            app:layout_constraintBottom_toBottomOf="@+id/textUserLocation"
+            app:layout_constraintEnd_toEndOf="@+id/textUserLocation"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textUserLocation"
+            app:srcCompat="@drawable/loc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_recycler"
+        android:layout_width="336dp"
+        android:layout_height="926dp"
+        android:backgroundTint="#FFC0CB"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tabchange"
+        app:layout_constraintTop_toBottomOf="@+id/constsearch" />
+
+    <ImageView
+        android:id="@+id/imageTab"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:onClick="tabchange"
+        app:layout_constraintEnd_toStartOf="@+id/constsearch"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSir"
+        app:srcCompat="@drawable/tab_change"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
